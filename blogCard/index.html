@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      .container {
+        background-color: #f4d04e; /* Optional background color */
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .box {
+        background-color: whitesmoke;
+        height: auto;
+        width: auto;
+        max-width: 330px;
+        z-index: 1;
+        padding: 10px 20px;
+        border: 1px solid rgb(52, 52, 52);
+        box-shadow: #f4d04e teal;
+        border-radius: 10px;
+      }
+      img {
+        border-radius: 10px;
+        height: 200;
+        width: 336;
+        /* padding-bottom: 10px; */
+      }
+
+      .title {
+        background-color: #f4d04e;
+        max-width: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: 900;
+        margin-top: 10px;
+      }
+      .sub {
+        /* background-color: #F4D04E;
+      max-width: 60px; */
+        padding-top: 10px;
+        border-radius: 10px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+
+        margin-top: 10px;
+      }
+      .para {
+        padding-top: 0px;
+        /* padding-top: 10px; */
+        /* word-wrap: break-word; */
+      }
+      .author {
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .author img {
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+      }
+      .author span {
+        padding-left: 10px;
+        font-size: 16px;
+        font-weight: 900;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img
+          src="blog-preview-card-main/assets/images/illustration-article.svg"
+          alt="blog preview"
+        />
+        <div class="title">Learning</div>
+        <div class="sub"><b>Published 21 Dec 2023</b></div>
+        <h1>HTML & CSS foundations</h1>
+        <div class="para">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </div>
+        <div class="author">
+          <img src="blog-preview-card-main/assets/images/image-avatar.webp" alt="author" /><span>Kamar Alam</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
