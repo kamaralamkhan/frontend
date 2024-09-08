@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable QR Code Generator</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e9ecef;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1000px; /* Increase max-width for better layout */
+            margin-bottom: 100px; /* Space for footer */
+            position: relative;
+            z-index: 1; /* Ensure it is above the footer */
+        }
+        .form-container {
+            max-width: 500px;
+            margin-right: 30px; /* Space between form and QR code */
+        }
+        .form-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-container input, .form-container select {
+            padding: 12px;
+            width: calc(100% - 24px);
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="color"] {
+            padding: 0;
+            border: none;
+            height: 40px;
+            width: 80px;
+            cursor: pointer;
+        }
+        .color-picker, .ai-colors {
+            display: none;
+        }
+        .color-picker label, .ai-colors label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #495057;
+        }
+        .ai-colors select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            font-size: 16px;
+        }
+        button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #qrcode {
+            max-width: 300px; /* Limit the QR code size */
+            margin-left: 30px; /* Space between form and QR code */
+        }
+        footer {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .footer-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .footer-content p {
+            margin: 0 0 10px;
+            color: #333;
+            font-size: 16px;
+        }
+        .footer-content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            margin: 0 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h2>QR Code Generator with AI Colors</h2>
+        <input type="text" id="link" placeholder="Enter your link here" autofocus>
+        <br>
+        <select id="design" onchange="toggleColorPickers()">
+            <option value="simple">Simple</option>
+            <option value="enhanced">Enhanced</option>
+        </select>
+        <br>
+        
+        <div class="color-picker" id="color-options">
+            <label>QR Code Color:</label>
+            <input type="color" id="qrColor" value="#1a73e8">
+            <br>
+            <label>Background Color:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+            <br>
+            <label>Feeling Lazy? Pick a Color Combo:</label>
+            <select id="aiColors" class="ai-colors" onchange="applyAIColors()">
+                <option value="">--Select--</option>
+                <option value="#ff6347,#ffe4e1">Warm Red & Light Peach</option>
+                <option value="#4682b4,#f0f8ff">Blue & Alice Blue</option>
+                <option value="#32cd32,#f5fffa">Lime Green & Mint Cream</option>
+                <option value="#ff1493,#ffe4b5">Deep Pink & Moccasin</option>
+                <option value="#6a5acd,#f8f8ff">Slate Blue & Ghost White</option>
+            </select>
+            <br>
+        </div>
+
+        <button onclick="generateQRCode()">Generate QR Code</button>
+        <button onclick="downloadQRCode()">Download QR Code</button>
+    </div>
+    <div id="qrcode"></div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>Created by <a href="http://github.com/kamaralamkhan" target="_blank">Kamar Alam Khan</a></p>
+        <div class="social-links">
+            <a href="http://github.com/kamaralamkhan" target="_blank">GitHub</a>
+            <a href="https://www.frontendmentor.io/profile/kamaralamkhan" target="_blank">Frontend Mentor</a>
+            <a href="https://www.linkedin.com/in/kamar-alam-khan-183237239/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/Kamaralamkhan_" target="_blank">Twitter</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+<script>
+    let qrCanvas;
+
+    function toggleColorPickers() {
+        const design = document.getElementById('design').value;
+        const colorOptions = document.getElementById('color-options');
+        const aiColors = document.getElementById('aiColors');
+
+        if (design === 'enhanced') {
+            colorOptions.style.display = 'block'; // Show color options for enhanced design
+            aiColors.style.display = 'block'; // Show AI color combinations dropdown
+        } else {
+            colorOptions.style.display = 'none'; // Hide color options for simple design
+        }
+    }
+
+    function applyAIColors() {
+        const aiColorOption = document.getElementById('aiColors').value;
+        if (aiColorOption) {
+            const [qrColor, bgColor] = aiColorOption.split(',');
+            document.getElementById('qrColor').value = qrColor;
+            document.getElementById('bgColor').value = bgColor;
+        }
+    }
+
+    function generateQRCode() {
+        const link = document.getElementById('link').value;
+        const qrcodeContainer = document.getElementById('qrcode');
+        const design = document.getElementById('design').value;
+
+        if (link) {
+            qrcodeContainer.innerHTML = ''; // Clear previous QR code
+            const options = {
+                errorCorrectionLevel: 'H',
+                width: 300,
+                margin: 3,
+                color: {
+                    dark: '#000', // Default QR code color for simple design
+                    light: '#ffffff' // Default background color for simple design
+                }
+            };
+
+            // Enhanced design with customizable colors
+            if (design === 'enhanced') {
+                const qrColor = document.getElementById('qrColor').value;
+                const bgColor = document.getElementById('bgColor').value;
+                options.color.dark = qrColor; // Custom QR code color
+                options.color.light = bgColor; // Custom background color
+                options.width = 350;
+            }
+
+            // Generate the QR code on the canvas
+            QRCode.toCanvas(link, options, function (err, canvas) {
+                if (err) console.error(err);
+                qrCanvas = canvas;
+                qrcodeContainer.appendChild(canvas);
+            });
+        } else {
+            alert('Please enter a link!');
+        }
+    }
+
+    // Function to download the QR code
+    function downloadQRCode() {
+        if (qrCanvas) {
+            const link = document.createElement('a');
+            link.href = qrCanvas.toDataURL('image/png');
+            link.download = 'qrcode.png';
+            link.click();
+        } else {
+            alert('Please generate a QR code first!');
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -2,91 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Social links profile</title>
+  <title>Kamar Alam Khan | Social Links</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
-      background: #131313;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      background: #1a1a2e; /* Darker background with a deep dark blue */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #FFFFFF;
       overflow: hidden;
-    }
-
-    button {
-      background-color: #282828;
-      color: #FFFFFF;
-      padding: 20px;
-      width: 100%;
-      border: none;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    button:hover {
-      background-color: #333333;
-    }
-
-    a {
-      color: #FFFFFF;
-      text-decoration: none;
-      display: block;
-      background-color: #282828;
-      padding: 20px;
-      width: 100%;
-      text-align: center;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    a:hover {
-      background-color: #333333;
+      margin: 0;
     }
 
     .container {
       height: 100vh;
-      width: 100vw;
-      background: #131313;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .box {
-      background-color: #201f1f;
-      height: auto;
-      width: auto;
-      border: 1px solid black;
+      background-color: #24243e; /* Dark color with a slight gradient */
       padding: 40px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Soft shadow for modern look */
+      width: 300px;
     }
 
     img {
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-    }
-
-    h5 {
-      color: #beef2b;
-      padding: 0;
+      width: 80px; /* Slightly larger profile image */
+      height: 80px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds depth to the image */
     }
 
     h2 {
-      margin-bottom: -17px;
+      margin: 10px 0 5px;
+      font-size: 1.6em;
+    }
+
+    h5 {
+      color: #a6e22e; /* Bright neon green for contrast */
+      margin-bottom: 20px;
+      font-weight: normal;
     }
 
     p {
       margin-top: 0;
-      padding: 0;
+      margin-bottom: 30px;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4e4e6a;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #5f5fc4;
+      transform: translateY(-5px); /* Adds a slight lift effect */
+    }
+
+    a:active {
+      transform: translateY(2px); /* Reduces the lift effect on click */
     }
   </style>
 </head>
@@ -94,13 +84,13 @@
   <div class="container">
     <div class="box">  
       <img src="./assets/images/profile.png" alt="profile" />
-      <h2>kamaralamkhan</h2>
+      <h2>Kamar Alam Khan</h2>
       <h5>Delhi, India</h5>
-      <p>"Frontend Developer social link"</p>
-      <a href="http://github.com/kamaralamkhan">Github</a>
-      <a href="http://github.com/kamaralamkhan">Frontend Mentor</a>
-      <a href="http://github.com/kamaralamkhan">Linkedin</a>
-      <a href="http://instagram.com/kamaralamkhan">Instagram</a>
+      <p>"Frontend Developer Social Links"</p>
+      <a href="http://github.com/kamaralamkhan" target="_blank">GitHub</a>
+      <a href="https://www.frontendmentor.io/profile/kamaralamkhan" target="_blank">Frontend Mentor</a>
+      <a href="https://www.linkedin.com/in/kamar-alam-khan-183237239/" target="_blank">LinkedIn</a>
+      <a href="https://x.com/Kamaralamkhan_" target="_blank">Twitter</a>
     </div>
   </div>
 </body>
