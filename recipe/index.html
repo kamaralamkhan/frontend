@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: #F3E5D8;
+      overflow-x: hidden;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .container{
+      /* height: 100vh; */
+      /* width: 100vw; */
+      /* max-width: 100px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px;
+      /* text-align: center; */
+    }
+    .row{
+      background-color: whitesmoke;
+      display: flex;
+      height: auto;
+      width: 500px;
+      max-width: 500px;
+      justify-content: center;
+      border-radius: 10px;
+      flex-direction:column ;
+      padding: 20px;
+    }
+    img{
+      height: 200px;
+      /* width: 500px; */
+      width: auto;
+      /* margin: 10px 0 10px 0; */
+      border-radius: 10px;
+      border: 1px groove;
+    }
+    h1{
+      margin-bottom: 0px;
+      
+    }
+    .list{
+      margin-top: 0;
+      margin-bottom: 0px;
+      padding: 0px 10px 0 10px;
+      background-color: #e4c3d6;
+      border-radius: 10px;
+      
+    }
+    .item{
+      margin-top: 0;
+      padding: 0;
+    }
+
+    table{
+      border-collapse: collapse;
+      width: 100%;
+      border: none;
+    }
+    th{
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      border: none;
+
+    }
+    td{
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      color: #961b1b;
+      /* border: none; */
+      border-top: #ddd;
+      border-left: #ddd;
+      border-right: #ddd;
+      border-bottom: 0.9 solid ;
+
+      /* text-combine-upright: a; */
+    }
+    th:nth-child(){
+      background-color: #f2f2f2;
+    }
+    
+  </style>
+</head>
+<body>
+
+  
+  <div class="container">
+    <div class="row">
+      <img src="./assets/images/image-omelette.jpeg" alt="" srcset="">
+      <h1>SIMPLE OMELTE ROTI</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, similique.Lorem ipsum dolor sit amet consectetur..</p>
+      <div class="list">
+        <h2 style="color: #961b1b;">Preparation Time</h2>
+        <ul type="disc" class="items" >
+          <li><span><B>Total: </B>Approx. 10 min</span></li>
+          <li><span><B>Preparation: </B>5 min</span></li>
+          <li><span><B>cooking: </B>5 min</span></li>
+
+        </ul>
+      </div>
+      <div class="list2">
+        <h2 style="color: #961b1b;">Preparation Time</h2>
+        <ul type="disc" class="items" >
+          <li><span>2-3 large eggs</span></li>
+          <li><span>salt 1 pepper</span></li>
+          <li><span>5 taspoon made</span></li>
+          <li><span>FLANA DHIMKA</span></li>
+        </ul>
+      <div class="list2">
+        <h2 style="color: #961b1b;">INSTRUCTION</h2>
+        <ol type="number" class="items" >
+          <li><span><p><B>Beat the eggs</B> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut necessitatibus est nulla cum vitae quidem sint, nam adipisci saepe!</p></span></li>
+          <li><span><p><B>Beat the eggs</B> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut necessitatibus est nulla cum vitae quidem sint, nam adipisci saepe!</p></span></li>
+          <li><span><p><B>Beat the eggs</B> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut necessitatibus est nulla cum vitae quidem sint, nam adipisci saepe!</p></span></li>
+          <li><span><p><B>Beat the eggs</B> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut necessitatibus est nulla cum vitae quidem sint, nam adipisci saepe!</p></span></li>
+          <li><span><p><B>Beat the eggs</B> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut necessitatibus est nulla cum vitae quidem sint, nam adipisci saepe!</p></span></li>
+          <li><span><p><B>Beat the eggs</B> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut necessitatibus est nulla cum vitae quidem sint, nam adipisci saepe!</p></span></li>
+        
+        </ol>
+
+      </div>
+      <div class="nutri">
+        <h2 style="color: #961b1b;">NUTRITION</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit voluptas qui, quidem culpa magni inventore?</p>
+      <table>
+        <tr>
+          <th>Nutrition</th>
+          <th>value</th>
+        </tr>
+        <tr>
+          <td>calories</td>
+          <td>277 calories</td>
+        </tr>
+        <tr>
+          <td>carbs</td>
+          <td>17 gram</td>
+        </tr>
+        <tr>
+          <td>protien</td>
+          <td>17 gram</td>
+        </tr>
+        <tr>
+          <td>fat</td>
+          <td>7 gram</td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
