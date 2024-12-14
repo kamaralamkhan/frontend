@@ -4,113 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kamar Alam Khan | Projects</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #121212; /* Dark background */
-      color: #f5f5f5; /* Light text color */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-
-    .container {
-      max-width: 800px;
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #00bfa6; /* Subtle teal color for heading */
-    }
-
-    p {
-      font-size: 1.2em;
-      color: #b3b3b3; /* Lighter gray text for paragraph */
-      margin-bottom: 40px;
-    }
-
-    .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .project {
-      background-color: #1e1e1e; /* Dark background for project boxes */
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .project:hover {
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
-      transform: translateY(-5px); /* Slight lift effect on hover */
-    }
-
-    h2 {
-      margin-bottom: 10px;
-      color: #00bfa6; /* Teal color for project titles */
-      font-size: 1.5em;
-    }
-
-    a {
-      text-decoration: none;
-      color: #121212; /* Dark text color for contrast */
-      background-color: #00bfa6; /* Muted teal buttons */
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    a:hover {
-      background-color: #009688; /* Slightly darker teal on hover */
-      color: #f5f5f5; /* Light text on hover */
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-  <div class="container">
-    <h1>Kamar Alam Khan's Projects</h1>
-    <p>Explore my recent projects by clicking the links below:</p>
-    <div class="projects">
-      <div class="project">
-        <h2>Social Link Profile</h2>
-        <p>A simple social link profile page design built with HTML and CSS.</p>
-        <a href="https://kamaralamkhan.github.io/frontend/social_link/" target="_blank">View Project</a>
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col items-center justify-center">
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl font-bold text-teal-400 mb-6 text-center">Kamar Alam Khan's Projects</h1>
+    <p class="text-lg text-gray-300 mb-8 text-center">Explore my recent projects by clicking the links below:</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">Forex Fundz</h2>
+        <p class="text-gray-400 mb-4">Professional trading services and financial insights.</p>
+        <a href="https://forexfundz.com" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
       </div>
-      <div class="project">
-        <h2>Blog Card</h2>
-        <p>A clean, responsive blog card component built for modern web designs.</p>
-        <a href="https://kamaralamkhan.github.io/frontend/blogCard/" target="_blank">View Project</a>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">CCIFS</h2>
+        <p class="text-gray-400 mb-4">Civil, Criminal, and Corporate legal services.</p>
+        <a href="https://ccifs.in" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
       </div>
-      <div class="project">
-        <h2>QR Code Generator</h2>
-        <p>A QR Code generator project using frontend technologies</p>
-        <a href="https://kamaralamkhan.github.io/frontend/qr_generator/" target="_blank">View Project</a>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">Badhana Panchal</h2>
+        <p class="text-gray-400 mb-4">Legal solutions for corporate and family matters.</p>
+        <a href="https://badhana-panchal.com" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
       </div>
-      <div class="project">
-        <h2>Kitchen Recipe</h2>
-        <p>Kitechen Recipe menu and details</p>
-        <a href="https://kamaralamkhan.github.io/frontend/recipe/" target="_blank">View Project</a>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">Tabish Sarosh Associates</h2>
+        <p class="text-gray-400 mb-4">Comprehensive legal consultancy services.</p>
+        <a href="https://tabishsaroshassociates.org" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">One Logica</h2>
+        <p class="text-gray-400 mb-4">Innovative IT and software development solutions.</p>
+        <a href="https://onelogica.com" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">HealFast</h2>
+        <p class="text-gray-400 mb-4">Medical care and recovery solutions.</p>
+        <a href="https://healfast.in" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">Social Link Profile</h2>
+        <p class="text-gray-400 mb-4">A simple social link profile page design built with HTML and CSS.</p>
+        <a href="https://kamaralamkhan.github.io/frontend/social_link/" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">Blog Card</h2>
+        <p class="text-gray-400 mb-4">A clean, responsive blog card component built for modern web designs.</p>
+        <a href="https://kamaralamkhan.github.io/frontend/blogCard/" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">QR Code Generator</h2>
+        <p class="text-gray-400 mb-4">A QR Code generator project using frontend technologies.</p>
+        <a href="https://kamaralamkhan.github.io/frontend/qr_generator/" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all">
+        <h2 class="text-2xl font-semibold text-teal-400 mb-2">Kitchen Recipe</h2>
+        <p class="text-gray-400 mb-4">Kitchen Recipe menu and details.</p>
+        <a href="https://kamaralamkhan.github.io/frontend/recipe/" target="_blank" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-400 transition">View Project</a>
       </div>
     </div>
   </div>
-
 </body>
 </html>
